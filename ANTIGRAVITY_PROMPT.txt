@@ -1,0 +1,31 @@
+Build and polish the existing project in this folder: “Comprehensive Student Academic & Activity Ledger”, a DBMS mini-project for a college engineering student with a one-day deadline.
+
+TECH STACK
+- Python + Streamlit GUI
+- MySQL as preferred database; SQLite fallback for instant local demo
+- SQLAlchemy parameterized queries
+- Plotly charts
+- Google Sheets API / gspread for one-way database-to-sheet synchronization
+
+FIRST ACTION
+Inspect all files before changing them. Run the app and fix runtime errors. Preserve working functionality. Do not merely describe code; implement changes in the files.
+
+REQUIRED FEATURES
+1. Normalized relational schema (at least 3NF) with tables for students, education_history (Secondary/Higher Secondary), semesters, subjects, semester_marks, seminars, and activities.
+2. Foreign keys with ON DELETE CASCADE or SET NULL, UNIQUE constraints, and CHECK constraints for percentages 0–100, marks 0–maximum, SGPA/CGPA 0–10, valid categories and semester numbers.
+3. CRUD interfaces for students, education history, semester records, theory subject marks, lab marks, seminars, and activities. Include editing and deletion, not only insertion.
+4. Search students by full name and roll number.
+5. Dynamic progression chart plotting SGPA and CGPA by semester; visually highlight gap/drop years using a red marker, annotation, or timeline gap.
+6. Separate tabs and filters: Internal/External seminars; Technical/Co-curricular/Extra-curricular activities; all semester, theory and lab marks; current student status.
+7. Google Sheets one-way synchronization to separate worksheet tabs for all database tables. Validate environment configuration and show clear success/error messages. If feasible, trigger sync after successful database CRUD; do not expose secrets. Do not implement unsafe unvalidated spreadsheet-to-database edits.
+8. Provide a dashboard with KPI cards, student profile details, recent activities, and clear charts.
+9. Add a demo-data seeder with clearly fictional records and a button to load sample data. Never use real student personal data as seed data.
+10. Add graceful validation, friendly error messages, empty-state messages, and responsive layout.
+
+DELIVERABLES
+- Working source code, requirements.txt, .env.example, schema.sql, README.md, and a short project report explaining objective, modules, ER relationships, normalization, constraints, screenshots to capture, testing, limitations, and conclusion.
+- Ensure a fresh install works using SQLite by default. MySQL must be selectable through DATABASE_URL in .env.
+- Test the application by starting it, fixing syntax/import/database issues, and report the exact commands to run it.
+- Do not claim Google Sheets is connected unless credentials and spreadsheet ID are actually configured and tested.
+- Keep UI polished but prioritize correctness and a reliable live demo over unnecessary complexity.
+- Before finishing, summarize modified files, exact run commands, what has been tested, and any remaining manual setup needed for Google Sheets.
